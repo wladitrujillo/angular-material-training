@@ -2,7 +2,7 @@
 
     <mat-form-field floatLabel="always">
         <mat-label>Course Title</mat-label>
-        <input matInput formControlName="title" #title/>
+        <input matInput formControlName="title" #title />
         <mat-hint align="end">
             {{title.value.length}} / 60
         </mat-hint>
@@ -10,9 +10,25 @@
             A minimum length of 5 characters is required.
         </mat-error>
     </mat-form-field>
- 
+
+    <mat-radio-group class="course-type" formControlName="courseType">
+
+        <mat-radio-button [disabled]="true" value="free">Free</mat-radio-button>
+        <mat-radio-button value="premium">Premium</mat-radio-button>
+
+    </mat-radio-group>
+
+    <mat-form-field appearance="outline">
+        <mat-select formControlName="category" placeholder="Select category">
+            <mat-option>None</mat-option>
+            <mat-optgroup label="Begginers">
+                <mat-option value="newprogramming">New To Programing</mat-option>
+                <mat-option value="newjavascript">New To Javascript</mat-option>
+                <mat-option value="newangular">New To Angular</mat-option>
+            </mat-optgroup>
+            <mat-option value="INTERMEDIATE">Intermediate</mat-option>
+            <mat-option value="ADVANCED">Adavanced</mat-option>
+        </mat-select>
+    </mat-form-field>
 
 </div>
-
-
-
