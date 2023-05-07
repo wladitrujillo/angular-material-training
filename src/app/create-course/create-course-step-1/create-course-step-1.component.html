@@ -33,16 +33,22 @@
 
     <mat-form-field appareance="outline">
 
-        <input matInput formControlName="releasedAt" placeholder="Release date" [matDatepicker]="releasedAtPicker"/>
+        <input matInput formControlName="releasedAt" placeholder="Release date" [matDatepicker]="releasedAtPicker" />
 
         <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">
 
         </mat-datepicker-toggle>
 
-        <mat-datepicker  #releasedAtPicker [dateClass]="dateClass">
+        <mat-datepicker #releasedAtPicker [dateClass]="dateClass">
 
         </mat-datepicker>
 
     </mat-form-field>
+
+    <mat-checkbox color="primary" formControlName="downloadsAllowed" [indeterminate]="true">
+
+        Downloads allowed?
+
+    </mat-checkbox>
 
 </div>
