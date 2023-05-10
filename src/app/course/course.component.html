@@ -4,6 +4,10 @@
 
   <img class="course-thumbnail mat-elevation-z8" [src]="course?.iconUrl">
 
+  <div class="spinner-container" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+
 </div>
 
 
@@ -18,7 +22,7 @@
   <ng-container matColumnDef="description">
 
     <th mat-header-cell *matHeaderCellDef>Description</th>
-    <td mat-cell *matCellDef="let lesson">{{lesson.seqNo}}</td>
+    <td mat-cell *matCellDef="let lesson">{{lesson.description}}</td>
 
   </ng-container>
   <ng-container matColumnDef="duration">
